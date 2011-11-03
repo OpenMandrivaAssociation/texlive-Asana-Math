@@ -1,3 +1,9 @@
+# revision 24343
+# category Package
+# catalog-ctan /fonts/Asana-Math
+# catalog-date 2011-10-20 20:20:48 +0200
+# catalog-license ofl
+# catalog-version 000.947
 Name:		texlive-Asana-Math
 Version:	000.947
 Release:	1
@@ -44,6 +50,7 @@ packages.
 %{_texmfdistdir}/fonts/truetype/public/Asana-Math/Asana-Math.ttf
 %doc %{_texmfdistdir}/doc/fonts/Asana-Math/FontLog.txt
 %doc %{_texmfdistdir}/doc/fonts/Asana-Math/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ packages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
