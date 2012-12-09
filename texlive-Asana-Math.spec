@@ -51,3 +51,23 @@ packages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 000.949-1
++ Revision: 813327
+- Update to latest release.
+
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 000.947-2
++ Revision: 749352
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 000.947-1
++ Revision: 717859
+- texlive-Asana-Math
+- texlive-Asana-Math
+- texlive-Asana-Math
+- texlive-Asana-Math
+- texlive-Asana-Math
+- texlive-Asana-Math
+
