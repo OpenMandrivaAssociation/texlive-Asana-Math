@@ -1,11 +1,11 @@
-# revision 27228
+# revision 31750
 # category Package
 # catalog-ctan /fonts/Asana-Math
-# catalog-date 2012-06-11 11:02:36 +0200
+# catalog-date 2013-09-22 21:43:13 +0200
 # catalog-license ofl
-# catalog-version 000.949
+# catalog-version 000.951
 Name:		texlive-Asana-Math
-Version:	000.949
+Version:	000.951
 Release:	1
 Summary:	A font to typeset maths in Xe(La)TeX and Lua(La)TeX
 Group:		Publishing
@@ -51,23 +51,3 @@ packages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 000.949-1
-+ Revision: 813327
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 000.947-2
-+ Revision: 749352
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 000.947-1
-+ Revision: 717859
-- texlive-Asana-Math
-- texlive-Asana-Math
-- texlive-Asana-Math
-- texlive-Asana-Math
-- texlive-Asana-Math
-- texlive-Asana-Math
-
