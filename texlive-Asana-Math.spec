@@ -6,7 +6,7 @@
 # catalog-version 000.949
 Name:		texlive-Asana-Math
 Version:	000.949
-Release:	1
+Release:	2
 Summary:	A font to typeset maths in Xe(La)TeX and Lua(La)TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/Asana-Math
