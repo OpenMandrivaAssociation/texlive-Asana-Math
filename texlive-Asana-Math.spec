@@ -5,8 +5,8 @@ Summary:	A font to typeset maths in Xe(La)TeX and Lua(La)TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/Asana-Math
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.r59629.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.doc.r59629.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
