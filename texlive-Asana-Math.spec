@@ -1,12 +1,12 @@
 Name:		texlive-Asana-Math
-Version:	000.958
+Version:	59629
 Release:	1
 Summary:	A font to typeset maths in Xe(La)TeX and Lua(La)TeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/Asana-Math
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/Asana-Math.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/Asana-Math.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.r59629.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.doc.r59629.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,22 +22,22 @@ with LaTeX is provided by the fontspec and unicode-math
 packages.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/fonts/opentype/public/Asana-Math
-%{_texmfdistdir}/fonts/truetype/public/Asana-Math
-%doc %{_texmfdistdir}/doc/fonts/Asana-Math
+%{_texmfdistdir}/fonts/opentype/public/asana-math
+%{_texmfdistdir}/fonts/truetype/public/asana-math
+%doc %{_texmfdistdir}/doc/fonts/asana-math
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
