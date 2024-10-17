@@ -3,7 +3,7 @@ Version:	59629
 Release:	2
 Summary:	A font to typeset maths in Xe(La)TeX and Lua(La)TeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/Asana-Math
+URL:		https://www.ctan.org/tex-archive/fonts/Asana-Math
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.doc.r%{version}.tar.xz
