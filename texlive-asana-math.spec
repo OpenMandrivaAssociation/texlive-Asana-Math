@@ -12,7 +12,7 @@ License:	ofl
 Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.r%{tl_revision}.tar.xz
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/asana-math.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-Requires(pre):	texlive-tlpkg
+BuildSystem:	texlive
 Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
@@ -23,46 +23,3 @@ text with any software that can understand the MATH OpenType table
 Typesetting support for use with LaTeX is provided by the fontspec and
 unicode-math packages.
 
-%prep
-%setup -q -c -a1
-rm -rf tlpkg
-if [ -d RELOC ]; then
-	cp -a RELOC/. .
-	rm -rf RELOC
-fi
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_datadir}/texmf-dist
-# Flat tlnet layout: tex/ doc/ source/ fonts/ ... -> texmf-dist/
-if [ -d texmf-dist ]; then
-	cp -a texmf-dist/. %{buildroot}%{_datadir}/texmf-dist/
-elif [ -d texmf ]; then
-	mkdir -p %{buildroot}%{_datadir}/texmf
-	cp -a texmf/. %{buildroot}%{_datadir}/texmf/
-else
-	for d in * .[!.]* ..?*; do
-		[ -e "$d" ] || continue
-		case "$d" in tlpkg|RELOC) continue ;; esac
-		cp -a "$d" %{buildroot}%{_datadir}/texmf-dist/
-	done
-fi
-rm -rf %{buildroot}%{_datadir}/texmf-dist/tlpkg
-
-%files
-%dir %{_datadir}/texmf-dist
-%dir %{_datadir}/texmf-dist/doc
-%dir %{_datadir}/texmf-dist/fonts
-%dir %{_datadir}/texmf-dist/doc/fonts
-%dir %{_datadir}/texmf-dist/fonts/opentype
-%dir %{_datadir}/texmf-dist/fonts/truetype
-%dir %{_datadir}/texmf-dist/doc/fonts/asana-math
-%dir %{_datadir}/texmf-dist/fonts/opentype/public
-%dir %{_datadir}/texmf-dist/fonts/truetype/public
-%dir %{_datadir}/texmf-dist/fonts/opentype/public/asana-math
-%dir %{_datadir}/texmf-dist/fonts/truetype/public/asana-math
-%doc %{_datadir}/texmf-dist/doc/fonts/asana-math/FontLog.txt
-%doc %{_datadir}/texmf-dist/doc/fonts/asana-math/README
-%{_datadir}/texmf-dist/fonts/opentype/public/asana-math/Asana-Math.otf
-%{_datadir}/texmf-dist/fonts/truetype/public/asana-math/ASANA.TTC
